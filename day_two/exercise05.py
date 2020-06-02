@@ -10,7 +10,7 @@ try:
         print("Well done, your number %s is within the values I gave you" % (number))
 except ValueError:
     print("You did not enter a number")    
-
+#####################################################
 try:
     first_num = int(input("Number 1\n"))
     last_num = int(input("Number 2\n"))
@@ -19,3 +19,24 @@ except ValueError:
     exit()
 
 print("The result is %s." % (first_num/last_num))
+#################################################### Extra
+cont = False
+while not cont:
+    try:
+        firstNum = int(input("Number 1\n"))
+        cont = True
+    except ValueError:
+        print("First Number is not a number")
+cont = False
+while not cont:  
+    try:
+        secondNum = int(input("Number 2\n"))
+        cont = True
+    except:
+        print("Second Number is not a number")
+
+try:
+    print("The result is %s." % (firstNum/secondNum))
+
+except ZeroDivisionError:
+    print("You divided by zero")
