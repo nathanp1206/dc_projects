@@ -11,5 +11,11 @@ try:
 except ValueError:
     print("You did not enter a number")    
 
-test
+try:
+    first_num = int(input("Number 1\n"))
+    last_num = int(input("Number 2\n"))
+except ValueError:
+    print("You input a text")
+    exit()
 
+print("The result is %s." % (first_num/last_num))
