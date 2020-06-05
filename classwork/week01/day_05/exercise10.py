@@ -18,3 +18,15 @@ names_and_force_side = {
     'maul':'dark'
 }
 print(names_and_force_side)
+
+falcon_parts = {
+    "Extras":[]
+    "Armament": []
+    
+}
+
+for key in falcon_parts:
+    print(key)
+
+if 'Extras' in falcon_parts:
+    print('Yup')
