@@ -63,7 +63,8 @@ class Dice():
         while loop == True:
             def averageRoll(rolls): 
                 return sum(rolls) / len(rolls)
-
+            if count % 10 == 0:
+                cheats += 1
             diceType = int(input("\nChoose a 6 12 or 20 sided dice. Type 6,12,20 to play, 0 to quit, 1 for the average of your rolls, or 2 for a cheat die(Once every 10 rolls):\n"))             
             
             if diceType == 6:
@@ -87,7 +88,7 @@ class Dice():
             elif diceType == 1:
                 average = averageRoll(rolls)
                 print("Your average roll so far is %s" % average)
-            elif diceType == 2 :
+            elif diceType == 2:
                 if cheats != 0:
                     cheat()
                     cheats -= 1
