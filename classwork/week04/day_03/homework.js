@@ -259,6 +259,9 @@ let characters = [
 // let names = characters.map(char=>char.name)
 // console.log(names)
 
+
+
+
 // let charsAndMass = characters.map(char=>parseInt(char.mass) > 50 ? {name:char.name, mass:char.mass} : null).filter(e=>e)
 // console.log(charsAndMass)
 
@@ -299,3 +302,4 @@ charsAndMass = characters.filter(char=>{
 }).map(function(char){
     return ({name:char.name, mass:char.mass})
 })
+
