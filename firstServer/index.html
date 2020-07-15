@@ -1,0 +1,19 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Look a website</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <div>The time is : <span id="time"></span></div>
+    </body>
+    <script>
+        let element = document.getElementById("time")
+        element.innerHTML = new Date().toTimeString()
+        setInterval(()=>{
+            element.innerHTML = new Date().toTimeString()
+        }, 1000)
+    </script>
+    </html>

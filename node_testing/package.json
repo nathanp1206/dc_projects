@@ -1,0 +1,17 @@
+{
+  "name": "node_testing",
+  "version": "1.0.0",
+  "description": "testing npm",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cowsay": "node ./main.js",
+    "nocowsay": "node ./nocowsay.js"
+  },
+  "author": "Nathan Patton",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.4.0",
+    "nodemon": "^2.0.4"
+  }
+}
