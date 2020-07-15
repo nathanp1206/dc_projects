@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin=""/>
+
+ 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+      <!-- Icons -->
+    <!-- <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/leaflet.extra-markers.min.css"> -->
+
+    <!-- Marker Cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body>
+    <div class="top">
+    <div class="title1">
+        <form method="get" action="../index.html">
+            <button>Home</button>
+        </form>
+    </div>
+    <div class="title1">
+        <form method="get" action="comparison.html">
+            <button>Compare</button>
+        </form>
+    </div>
+    </div>
+    <div>
+        <div class="toolbar">
+            <form class="search-form" method="get" action="">
+                <input class="input1" type="tel" placeholder=" Only zip codes" max="5" name="search"/> 
+                <button class="input" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div>
+                <!-- <div class="dropdown">
+                    <button class="dropbtn">Price</button>
+                    <div class="dropdown-content">
+                        <a href="#"><input type="checkbox" id="A" name="A" value="A">A</a>
+                        <a href="#"><input type="checkbox" id="B" name="B" value="B">B</a>
+                        <a href="#"><input type="checkbox" id="C" name="C" value="C">C</a>
+                        <a href="#"><input type="checkbox" id="D" name="D" value="D">D</a>
+                        <a href="#"><input type="checkbox" id="F" name="F" value="F">F</a>
+                        <input class="input5" type="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Education</button>
+                <div class="dropdown-content">
+                    <form>
+                        <a href="#"><input type="checkbox" id="A" name="A" value="A">A</a>
+                        <a href="#"><input type="checkbox" id="B" name="B" value="B">B</a>
+                        <a href="#"><input type="checkbox" id="C" name="C" value="C">C</a>
+                        <a href="#"><input type="checkbox" id="D" name="D" value="D">D</a>
+                        <input class="input5" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Crime</button>
+                <div class="dropdown-content">
+                    <form>
+                        <a href="#"><input type="checkbox" id="A" name="A" value="A">A</a>
+                        <a href="#"><input type="checkbox" id="B" name="B" value="B">B</a>
+                        <a href="#"><input type="checkbox" id="C" name="C" value="C">C</a>
+                        <a href="#"><input type="checkbox" id="D" name="D" value="D">D</a>
+                        <a href="#"><input type="checkbox" id="F" name="F" value="F">F</a>
+                        <input class="input5" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- MAPS GO HERE >>>> -->
+    <div class="map" id="map">
+     <!-- Icons -->
+    <!-- <script src="static/js/leaflet.extra-markers.min.js"></script> -->
+    <!-- MomentJS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <!-- D3 CDN -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- Marker Cluster JS -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script type="text/javascript" src="static/js/choropleth.js"></script>
+    <!-- API key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    
+
+
+      <!-- JS  -->
+    <!-- <script type="text/javascript" src="static/js/baseMap.js"></script> -->
+    <!-- <script type="text/javascript" src="static/js/zipMap.js"></script> -->
+    <!-- <script type="text/javascript" src="static/js/advancedMap.js"></script> -->
+    <!-- <script type="text/javascript" src="static/js/educationMap.js"></script> -->
+    <!-- <script type="text/javascript" src="static/js/crimeHeatMap.js"></script> -->
+    <!-- <script type="text/javascript" src="static/js/restaurantsMap.js"></script> -->
+    <script type="text/javascript" src="static/js/FilterableMap.js"></script>
+    <script type="text/javascript" src="static/js/rankerMap.js"></script>
+    <script type="text/javascript" src="static/js/zipCompCharts.js" type = 'module'></script>
+    <!-- Leaflet heatmap plugin-->
+    <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
+    <!-- zip ranking algorithm -->
+    <script type="text/javascript" src="static/js/zipRanker.js"></script>
+    <!-- data files -->
+    <script type="text/javascript" src="static/js/schoolDataFile.js"></script>
+    <script type="text/javascript" src="static/js/loadData.js"></script>
+    <!-- restaraunt stuff -->
+    <!-- <script type="module" src="./src/app.js"></script> -->
+    </div>
+    <div class="pop-up">
+        <div class="popups">
+            <div>
+                <img class="popup-image" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png" alt="Airplane">
+            </div>
+            <div class="popup-text"> 
+                This is some test text to make sure everything works as it is supposed to and then I will remove it and input text using javascript. I am trying to get this crap to work and hopefully it will. I think this will look really cool once it is complete
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart" id="edu">
+
+            </div>
+            <div class="chart" id="crime">
+
+            </div>
+            <div class="chart" id="price">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

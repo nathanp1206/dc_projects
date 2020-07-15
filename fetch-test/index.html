@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //test 1
+        // //This logs the response
+        // fetch("data.json")
+        // .then(resp=>console.log(resp))
+
+        // //test 2
+        // //This logs the response as an array
+        // fetch("data.json")
+        // .then(resp=>resp.json())
+        // .then(data=>console.log(data))
+
+        // //test 3
+        // //This doesnt log anything as its a text file
+        // fetch("data.txt")
+        // .then(resp=>resp.json())
+        // .then(data=>console.log(data))
+
+        // //test 4
+        // //This doesnt log anything as its a test file as well
+        // fetch("data.txt")
+        // .then(resp=>resp.json())
+        // .then(data=>console.log(data))
+        // .catch(error=>console.log(error))
+
+        // //test 5
+        // //There is no file named foo so this should give a 404 error
+        // fetch("foo.txt")
+        // .then(resp=>resp.json())
+        // .then(data=>console.log(data))
+        // .catch(error=>console.log(error))
+
+        //test 6
+        // //This is logging the response and then also logging undefined because its returning console.log
+        // fetch("data.json")
+        // .then(resp=>resp.json())
+        // .then(data=>console.log(data))
+        // // .then(moreData=>console.log(moreData))
+        // .catch(error=>console.log(error))
+
+        // //test 7
+        // //This returns the array and then appends the new data onto it
+        // fetch("data.json")
+        // .then(resp=>resp.json())
+        // .then(data=>[...data, {name:'Ally', age:8}, {name:"Mark", age:6} ])
+        // .then(moreData=>console.log(moreData))
+        // .catch(error=>console.log(error))
+
+    </script>
+</body>
+</html>

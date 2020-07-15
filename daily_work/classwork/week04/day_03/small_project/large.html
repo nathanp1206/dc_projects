@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Exercise</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+
+            likes = []
+            dislikes = []
+
+            const addAboutMe = (title, images, description, likes, dislikes) => {
+                let link = document.createElement("link")
+                link.setAttribute("rel", "stylesheet")
+                link.setAttribute("href", "style.css")
+
+                let newSection = document.createElement("section")
+                
+                let newH2 = document.createElement("h2")
+                newH2.innerText = title
+
+                let newP = document.createElement("p")
+                let image = document.createElement("IMG")
+                image.setAttribute("src", images)
+                newP.append(image)
+
+                let newP4 = document.createElement("p")
+                newP4.append(description)
+
+                let newP2 = document.createElement("p")
+                let newUl = document.createElement("ul")
+                
+                newUl.append(likes)
+                newP2.append(newUl)
+
+
+                let newP3 = document.createElement("p")
+                let newUl2 = document.createElement("ul")
+                newUl2.append(dislikes)
+                newP3.append(newUl2)
+                
+                newSection.append(link, newH2, newP, newP4, newP2, newP3)
+
+                newP.setAttribute("class", "paragraph")
+                newP2.setAttribute("class", "paragraph")
+                newP3.setAttribute("class", "paragraph")
+                newP4.setAttribute("class", "paragraph")
+                newUl.setAttribute("class", "list")
+                newUl2.setAttribute("class", "list")
+                newH2.setAttribute("class", "heading")
+                image.setAttribute("class", "image")
+
+                let root = document.getElementById("root")
+                root.setAttribute("class", "root")
+                root.append(newSection)
+            }
+            addAboutMe("Nathan Patton: About Me", 
+            'https://s3.amazonaws.com/rm3.photos.prod.readmedia.com/students/3484918/medium/photo?1468587242', 
+            "I graduated from Georgia College with a Bachelors in Management of Information Systems in 2020. I grew up in Lagrange, GA.",
+            'I like: Soccer, Gaming, Technology, and Computers',
+            'I dislike: Hot rooms, Losing, and Not getting the job done'
+            )
+    </script>
+</body>
+</html>
