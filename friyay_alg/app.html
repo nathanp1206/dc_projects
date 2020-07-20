@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>    
+        <meta charset="UTF-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <title>Document</title>
+    </head>
+    <body>    
+        <script>        
+            // Take any number n. If n is even, divide it by 2, if n is odd,         
+            // multiply it by 3 and add 1. Repeat the process indefinitely, and         
+            // you’ll eventually reach 1.Given a num variable, can you print all         
+            // the numbers in num’s Collatz sequence until 1 is reached? Print the         
+            // numbers space-separated (and each test case on its own line).
+
+            // let n = Math.floor(Math.random(2,10)*10+2)
+
+            // while(n !== 1){            
+            //     console.log(`Original number: ${n}`)            
+            //     if(n % 2 === 0){                
+            //         n = n/2            
+            //     } else {                
+            //         n = (n*3)+1            
+            //     }            
+            //     console.log(n)        
+            // }    
+
+            // A palindromic number reads the same both ways. The largest palindrome 
+            // made from the product of two 2-digit numbers is 9009 = 91 × 99.
+            // Find the largest palindrome made from the product of two 3-digit numbers.
+            //     let palindrome = 0
+            //     for(i=500; i<999; i++){
+            //         for(f=500; f<999; f++){
+            //             total = i * f
+            //             console.log(total)
+            //             pal(total)
+            //             if(total > palindrome){
+            //                 total = palindrome
+            //                 console.log(total)
+            //             }
+            //         }
+            //     }
+
+            // function pal(userInput){
+            //     let reverseNum = userInput.toString().split('').reverse().join()
+            //     if(userInput === reverseNum){
+            //         console.log('true')
+            //         let palindrome = userInput
+            //     } else {
+            //         console.log('false')
+            //     }
+            // }
+
+            // 2520 is the smallest number that can be divided by each of the numbers from 
+            // 1 to 10 without any remainder. What is the smallest positive number that is 
+            // evenly divisible by all of the numbers from 1 to 20?
+
+            let count = 1
+
+                function checkRem(i){
+                    
+            }
+
+            for(index=2520; index<8000; index++){
+                for(count=0; count < 21; count++){
+                        if(i % count === 0){
+                            return true
+                        } else {
+                            return false
+                        }
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>
