@@ -1,0 +1,17 @@
+{
+  "name": "postgress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:install": "createdb todo_app && psql todo_app < install.sql",
+    "seed:install": "psql todo_app < seed.sql"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg-promise": "^10.5.8",
+    "psql": "0.0.1"
+  }
+}
